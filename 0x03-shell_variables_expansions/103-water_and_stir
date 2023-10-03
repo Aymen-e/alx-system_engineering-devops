@@ -1,0 +1,5 @@
+#!/bin/bash
+WATER=$(echo $WATER | tr 'water' '01234')
+STIR=$(echo $STIR | tr 'stir.' '01234')
+SUM=$((WATER + STIR))
+echo $(echo "obase=8; $SUM" | bc) | tr '01234567' 'bestchol'
