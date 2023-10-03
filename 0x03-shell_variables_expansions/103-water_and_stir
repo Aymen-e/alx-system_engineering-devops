@@ -1,15 +1,9 @@
 #!/bin/bash
-
 WATER_BASE=5
 STIR_BASE=5
 BESTCHOL_BASE=8
-
 WATER_VAL=$(echo $WATER | tr 'water' '01234')
 STIR_VAL=$(echo $STIR | tr 'stir.' '01234')
-
 SUM=$((WATER_VAL + STIR_VAL))
-
 BESTCHOL_VAL=$(printf '%o\n' $SUM)
-
 echo $BESTCHOL_VAL | tr '01234567' 'bestchol'
-
